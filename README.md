@@ -16,8 +16,10 @@ The code works by typing an alias you will make later and adding 2 arguments:
   $goose g how to make a cake
   ```
 - For a Youtube search:
-  `  $goose yt best ways to make money real quick tutorial`
-  As you can see the alias that i used was `goose` which stands for `google search engine` but you can use whatever you want.
+  ```
+  $goose yt best ways to make money real quick tutorial
+  ```
+  As you can see the alias that i used was `goose`which stands for`google search engine` but you can use whatever you want.
 
 #### Okay so basically you need to have some things installed
 
