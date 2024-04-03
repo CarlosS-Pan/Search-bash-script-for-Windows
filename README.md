@@ -13,11 +13,11 @@ The code works by typing an alias you will make later and adding 2 arguments:
 
 - For a google search:
   ```
-  $goose g how to make a cake
+  $ goose g how to make a cake
   ```
 - For a Youtube search:
   ```
-  $goose yt best ways to make money real quick tutorial
+  $ goose yt best ways to make money real quick tutorial
   ```
   As you can see the alias that i used was `goose`which stands for`google search engine` but you can use whatever you want.
 
@@ -27,8 +27,8 @@ The code works by typing an alias you will make later and adding 2 arguments:
 - Need to create an alias on a .bashrc file, you can do this by running on bash
 
   ```
-  $cd ~
-  $nano .bashrc
+  $ cd ~
+  $ nano .bashrc
   ```
 
   - in nano:
