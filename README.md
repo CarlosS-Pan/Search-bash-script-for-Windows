@@ -27,7 +27,7 @@ The code works by typing an alias you will make later and adding 2 arguments:
   ```
   $ goose a pc speakers
   ```
-  As you can see the alias that i used was `goose`which stands for`google search engine` but you can use whatever you want.
+  As you can see the alias that i used was `goose` which stands for `google search engine` but you can use whatever you want.
 
 #### Okay so basically you need to have some things installed
 
