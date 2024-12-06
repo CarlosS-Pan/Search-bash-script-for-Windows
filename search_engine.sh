@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+    #!/usr/bin/sh
 
 # echo "MY first bash script!"
 
@@ -10,6 +10,24 @@ GREET="Good Morning, $USERNAME 😹👍"
 # echo prints the greeting
 echo $GREET
 
+# this function searches for a given URL depending on the Operating System
+open_url() {
+    # stores the given parameter as the URL
+    url="$1"
+    # checks for the operating system
+    if [[ $OSTYPE == "linux-gnu" || "$(uname)" == "Linux" ]]; then
+        xdg-open "$url"
+        echo "using $OSTYPE"
+    elif [[ $OSTYPE == "msys" ]]; then
+        start "$url"
+        echo "using $OSTYPE"
+    else
+        echo "Unsupported operating system. Cannot open URL."
+        return 1
+    fi
+
+}
+
 # sample search: "goose g how to make a cake"
 search_google() {
     # this line checks for the parameter that is sent from the IF statement
@@ -20,7 +38,7 @@ search_google() {
     query=$(echo "$query" | sed 's/ /+/g') 
     #'sed' replaces("s") all("g") spaces("/ /") with a plus sign ("/+/") since its how all browsers concatenate the string to search 
 
-    start "https://www.google.com/search?q=$query" # searches the link on your default browser
+    open_url "https://www.google.com/search?q=$query" # searches the link on your default browser
 }
 
 # sample search: "goose yt [youtube-search]"
@@ -28,7 +46,7 @@ search_youtube() {
     query="$1"
     echo "Searching on Youtube for: $query"
     query=$(echo "$query" | sed 's/ /+/g')
-    start "https://www.youtube.com/results?search_query=$query"
+    open_url "https://www.youtube.com/results?search_query=$query"
 }
 
 # sample search: "goose a [amazon-search]"
@@ -36,7 +54,7 @@ search_amazon() {
     query="$1"
     echo "Searching on Amazon for: $query"
     query=$(echo "$query" | sed 's/ /+/g')
-    start "https://www.amazon.com/s?k=$query"
+    open_url "https://www.amazon.com/s?k=$query"
 }
 
 
